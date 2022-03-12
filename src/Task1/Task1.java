@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class Task1 {
     public static void main(String[] args) throws IOException {
 
-BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите свой вес:");
 
         double myWeight = Double.parseDouble(reader.readLine());
