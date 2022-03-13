@@ -3,6 +3,8 @@ package Course1.Task1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+/* 1. Напишите программу, которая вычисляет ваш вес на Луне с учетом того,
+что сила тяжести равна 16% от силы тяжести на Земле. */
 
 public class Task1 {
     public static void main(String[] args) throws IOException {

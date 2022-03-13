@@ -3,6 +3,7 @@ package Course1.Task2;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+/*2. Напишите метод, который будет увеличивать каждый элемент массива на 10%. */
 
 public class Task2 {
     public static void main(String[] args) throws IOException {
