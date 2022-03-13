@@ -1,4 +1,4 @@
-package Task3;
+package Course1.Task3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
