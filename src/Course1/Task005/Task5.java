@@ -1,4 +1,4 @@
-package Course1.Task5;
+package Course1.Task005;
 /*5. Вывести на  экран все нечетные цифры от 1 до 15
 (используйте остаток от деления)*/
 public class Task5 {

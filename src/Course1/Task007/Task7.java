@@ -1,4 +1,4 @@
-package Course1.Task7;
+package Course1.Task007;
 /*7. Посчитать сумму цифр от 20 до 200 и результат вывести
 на экран (используя цикл for)*/
 public class Task7 {
