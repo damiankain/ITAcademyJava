@@ -20,6 +20,7 @@ public class Car implements Movable, CarBrands, Comparable<Car> {
         this.lights = 4;
         this.model = "model";
         this.brand = getRandomBrand();
+
     }
 
     public Car(int engine, int doors, int wheels, int places, int lights, String model, String brand) {
@@ -32,9 +33,7 @@ public class Car implements Movable, CarBrands, Comparable<Car> {
         this.brand = brand;
     }
 
-    public int getEngine() {
-        return engine;
-    }
+    public int getEngine() { return engine; }
 
     public void setEngine(int engine) {
         this.engine = engine;

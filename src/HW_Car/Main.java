@@ -9,6 +9,8 @@ public class Main {
         sort(cars);
         for (Car car : cars) {
             System.out.println(car);
+            car.move();
+            car.light();
         }
     }
 
