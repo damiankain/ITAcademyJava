@@ -1,21 +1,22 @@
 package HW_Car;
 
-public class Utils implements CarBrands{
-    public String getBrand(){
-        return getBrandRandom();
-    }
+import java.util.Arrays;
 
-    public static void generateCar (int count) {
+public class Utils {
+
+    public static Car[] generateCars(int count) {
 
         // Метод генерирует массив машин по входящему параметру count
 
         Car[] cars = new Car[count];
-        for (int i = 0; i < count-1; i++) {
+        for (int i = 0; i < count; i++) {
             cars[i] = new Car();
         }
+        return cars;
     }
 
-
-
+    public static void sort(Car[] cars) {
+        Arrays.sort(cars);
+    }
 
 }
