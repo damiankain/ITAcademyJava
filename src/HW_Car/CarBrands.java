@@ -10,6 +10,5 @@ public interface CarBrands {
         int n = (int) Math.floor(Math.random() * brands.length);
         return brands[n];
     }
-
 }
 

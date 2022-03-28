@@ -9,15 +9,13 @@ public class Utils {
         // Метод генерирует массив машин по входящему параметру count
 
         Car[] cars = new Car[count];
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < cars.length; i++) {
             cars[i] = new Car();
-
-
         }
         return cars;
     }
 
-    public static void sort(Car[] cars) {
+    public static <Car> void sort(Car[] cars) {
         Arrays.sort(cars);
     }
 

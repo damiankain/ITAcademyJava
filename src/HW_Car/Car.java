@@ -115,12 +115,12 @@ public class Car implements Movable, CarBrands, Comparable<Car> {
 
     @Override
     public void move() {
-        System.out.println("Поехали");
+        System.out.println("Начинаем движение");
     }
 
     @Override
     public void light() {
-        System.out.println("Светим");
+        System.out.println("Светим фарами");
     }
 
     @Override
