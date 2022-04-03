@@ -9,8 +9,6 @@ public class Cat {
     String ownerFullName;
     double weight;
 
-
-
     public Cat() {
     }
 

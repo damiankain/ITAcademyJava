@@ -12,6 +12,7 @@ public class Lists {
     static LinkedList<SomeObject> linkList = new LinkedList<>();
 
     public static void main(String[] args) {
+
         genArraylist(10000000); // passing value to method
         removeFirstElementArrayList ();
 
@@ -20,42 +21,35 @@ public class Lists {
     }
 
     public static void genArraylist(int x) { // This method generate Arraylist
-        long start = System.currentTimeMillis();
+        Sekundomer.start();
         for (int i = 0; i < x; i++) {
             arrayList.add(new SomeObject(getSomeString()));
         }
-        long finish = System.currentTimeMillis();
-        long result = finish - start;
-        System.out.println("Create ArrayList takes " + result + " ms");
-
-
+        Sekundomer.finish();
+        Sekundomer.result();
     }
+
     public static void removeFirstElementArrayList () { // Remove first element from ArrayList
-        long start = System.currentTimeMillis();
+        Sekundomer.start();
         arrayList.remove(arrayList.get(0));
-        long finish = System.currentTimeMillis();
-        long result = finish - start;
-        System.out.println("Remove first element ArrayList " + result + " ms");
-
+        Sekundomer.finish();
+        Sekundomer.result();
     }
-
 
     public static void genLinklist(int x) { // This method generate Linkedlist
-        long start = System.currentTimeMillis();
+        Sekundomer.start();
         for (int i = 0; i < x; i++) {
             linkList.add(new SomeObject(getSomeString()));
         }
-        long finish = System.currentTimeMillis();
-        long result = finish - start;
-        System.out.println("Create LinkedList takes " + result + " ms");
+        Sekundomer.finish();
+        Sekundomer.result();
     }
 
     public static void removeFirstElementFromLinkedList () { // Remove first element from LinkedList
-        long start = System.currentTimeMillis();
+        Sekundomer.start();
         linkList.removeFirst();
-        long finish = System.currentTimeMillis();
-        long result = finish - start;
-        System.out.println("Remove first element ListList " + result + " ms");
+        Sekundomer.finish();
+        Sekundomer.result();
     }
 
 }
