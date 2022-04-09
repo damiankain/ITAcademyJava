@@ -1,8 +1,10 @@
 package hw_book_good_student.domain;
 
+import hw_book_good_student.util.Util;
+
 import java.util.Objects;
 
-import static hw_book_good_student.util.Util.getBookTitle;
+import static hw_book_good_student.util.Util.*;
 
 
 public class Book implements TitleLists, Comparable<Book> {
@@ -10,6 +12,7 @@ public class Book implements TitleLists, Comparable<Book> {
     private String authorName;
     private String authorSurname;
     private String authorPatronymic;
+
 
     public String getTitle() {
         return title;
@@ -22,24 +25,20 @@ public class Book implements TitleLists, Comparable<Book> {
 
     public Book() {
         this.title = getBookTitle();
-        this.authorName = authorName;
-        this.authorSurname = authorSurname;
-        this.authorPatronymic = authorPatronymic;
+        this.authorName = getAuthorName();
+        this.authorSurname = getAuthorSurname();
+        this.authorPatronymic = getAuthorPatronymic();
     }
-    public Book(String title, String author) {
+
+    public Book(String title, String author, String authorSurname, String authorPatronymic) {
         this.title = title;
         this.authorName = author;
+        this.authorSurname = authorSurname;
+        this.authorPatronymic = authorPatronymic;
 
     }
 
-    @Override
-    public String toString() {
-        return "Book { "
-                + title +
-                ", authorName '" + authorName +
-                "'" +
-                '}' + "\n";
-    }
+
 
 
     @Override
@@ -64,5 +63,15 @@ public class Book implements TitleLists, Comparable<Book> {
     @Override
     public int compareTo(Book book) {
         return title.compareTo(book.getTitle());
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", authorName='" + authorName + '\'' +
+                ", authorSurname='" + authorSurname + '\'' +
+                ", authorPatronymic='" + authorPatronymic + '\'' +
+                '}' + "\n";
     }
 }

@@ -13,12 +13,31 @@ public class Util implements TitleLists {
     //Constant to remove an element
     public static final int NUMBERREMOVEELEMENT = 7;
 
+    public static int INDEXBOOK = 0;
+
+    public static int getRandomIndexBook () {
+        INDEXBOOK = (int) Math.floor(Math.random() * (TITLELIST.length));
+        return INDEXBOOK;
+    }
+
     //The method returns a random book title from the list
     public static String getBookTitle() {
-        int index = (int) Math.floor(Math.random() * (TITLELIST.length));
-
-        return TITLELIST[index];
+        getRandomIndexBook();
+        return TITLELIST[INDEXBOOK];
     }
+
+    public static String getAuthorName() {
+        return NAMEAUTHORLIST[INDEXBOOK];
+    }
+
+    public static String getAuthorSurname() {
+        return SURNAMEAUTHORLIST[INDEXBOOK];
+    }
+
+    public static String getAuthorPatronymic() {
+        return PATRONYMICAUTHORLIST[INDEXBOOK];
+    }
+
 
     //The method returns a random string according to the specified number of characters
     public static String getRandomString(int length) {
@@ -77,7 +96,7 @@ public class Util implements TitleLists {
         }
 
         for (int i = 0; i < 6; i++) {
-            Book book = new Book("Без названия", "Без автора");
+            Book book = new Book("Без названия", "Без автора", "Без фамилии", "Без отчества");
             listOfBooks.add(book);
         }
         return listOfBooks;
