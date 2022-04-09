@@ -1,7 +1,8 @@
-package HW_Book_Good_Student;
+package hw_book_good_student.domain;
 
-interface TitleList {
+public interface TitleLists {
 
+    //The array holds a list of book titles to generate objects
     String[] TITLELIST = {
             "Война и мир",
             "1984",
@@ -25,5 +26,17 @@ interface TitleList {
             "Гроздья гнева"
     };
 
+    String[] NAMEAUTHOR = {
+            "Лев",
+            "Джордж",
+            "Джеймс",
+            "Владимир",
+            "Уильям",
+            "Ральф",
+            "Вирджиния",
+            "Гомер",
+            "Джейн",
+            "Данте",
 
+    };
 }
