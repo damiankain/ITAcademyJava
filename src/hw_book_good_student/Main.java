@@ -4,31 +4,33 @@ import hw_book_good_student.domain.Book;
 import hw_book_good_student.domain.Student;
 import hw_book_good_student.util.Util;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("******************* Task 1 *******************");
 
-        //List<Book> listOfBookLLTask1 = Util.generateLinkedList(Util.LISTSIZE20);
-        //Util.printBooksLinkedList(listOfBookLL);
-        //Util.removeElementFromLinkedList(listOfBookLL); // remove the element #7
-        //Util.printBooksLinkedList(listOfBookLL);
+        /*List<Book> listOfBookLLTask1 = Util.generateLinkedList(Util.LISTSIZE20);
+        Util.printBooksLinkedList(listOfBookLLTask1);
+        Util.removeElementFromLinkedList(listOfBookLLTask1); // remove the element #7
+        Util.printBooksLinkedList(listOfBookLLTask1);*/
 
         System.out.println("******************* Task 2 *******************");
 
-        //The method generates a hash set of 25 elements, where 6 elements are identical
-        //HashSet<Book> listOfBookHS = Util.generateHashSet ();
+       /* //The method generates a hash set of 25 elements, where 6 elements are identical
+        HashSet<Book> listOfBookHS = Util.generateHashSet ();
 
-        ////This Method outputs a HashSet to the console
-        //Util.printBooksHashSet(listOfBookHS);
-        //
+        //This Method outputs a HashSet to the console
+        Util.printBooksHashSet(listOfBookHS);
+
         //This method prints to the console only elements that begin with vowels.
-        //Util.printHashSetconsonantlist(listOfBookHS);
+        Util.printHashSetconsonantlist(listOfBookHS);*/
 
         System.out.println("******************* Task 3 *******************");
 
-        List<Book> listOfBookLLTask3 = Util.generateLinkedList(Util.LISTSIZE25);
+        /*List<Book> listOfBookLLTask3 = Util.generateLinkedList(Util.LISTSIZE25);
 
         Util.sort(listOfBookLLTask3, Util.authorSurname);
         Util.printBooksLinkedList(listOfBookLLTask3);
@@ -37,11 +39,12 @@ public class Main {
         Util.printBooksLinkedList(listOfBookLLTask3);
 
         Util.sort(listOfBookLLTask3, Util.authorPatronymic);
-        Util.printBooksLinkedList(listOfBookLLTask3);
+        Util.printBooksLinkedList(listOfBookLLTask3);*/
 
         System.out.println("******************* Task 4 *******************");
 
-        List<Student> listOfStudent = Util.generateLinkedListStudents(20);
+        Set<Student> listOfStudent = Util.generateTreeSetStudents(20);
+        Util.printBooksLinkedListStudents(listOfStudent);
 
 
 

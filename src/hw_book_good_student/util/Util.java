@@ -69,8 +69,8 @@ public class Util implements TitleLists {
         return listOfBooks;
     }
 
-    public static List<Student> generateLinkedListStudents(int count) {
-        List<Student> listOfStudent = new LinkedList<>();
+    public static Set<Student> generateTreeSetStudents(int count) {
+        Set<Student> listOfStudent = new TreeSet<>();
 
         for (int i = 0; i < count; i++) {
             Student student = new Student();
@@ -84,6 +84,10 @@ public class Util implements TitleLists {
         System.out.println(list);
     }
 
+    public static void printBooksLinkedListStudents(Set<Student> list) {
+        System.out.println(list);
+    }
+
     //This Method outputs a HashSet to the console
     public static void printBooksHashSet(Set<Book> set) {
         System.out.println(set);
@@ -92,6 +96,14 @@ public class Util implements TitleLists {
     //This method removes an element from the linked list
     public static void removeElementFromLinkedList(List<Book> list) {
         list.remove(NUMBERREMOVEELEMENT);
+    }
+
+    public static void removeElementFromStudentList (Set<Student> list) {
+       /* for (int i = 0; i < list.size(); i++) {
+            if () {
+                list.remove(i);
+            }
+        }*/
     }
 
     //This method prints to the console only elements that begin with vowels.
