@@ -1,7 +1,6 @@
 package hw_book_good_student.domain;
 
-import hw_book_good_student.util.Util;
-
+import java.util.Comparator;
 import java.util.Objects;
 
 import static hw_book_good_student.util.Util.*;
@@ -13,7 +12,6 @@ public class Book implements TitleLists, Comparable<Book> {
     private String authorSurname;
     private String authorPatronymic;
 
-
     public String getTitle() {
         return title;
     }
@@ -22,12 +20,35 @@ public class Book implements TitleLists, Comparable<Book> {
         this.title = title;
     }
 
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public String getAuthorSurname() {
+        return authorSurname;
+    }
+
+    public void setAuthorSurname(String authorSurname) {
+        this.authorSurname = authorSurname;
+    }
+
+    public String getAuthorPatronymic() {
+        return authorPatronymic;
+    }
+
+    public void setAuthorPatronymic(String authorPatronymic) {
+        this.authorPatronymic = authorPatronymic;
+    }
 
     public Book() {
         this.title = getBookTitle();
-        this.authorName = getAuthorName();
-        this.authorSurname = getAuthorSurname();
-        this.authorPatronymic = getAuthorPatronymic();
+        this.authorName = getBookAuthorName();
+        this.authorSurname = getBookAuthorSurname();
+        this.authorPatronymic = getBookAuthorPatronymic();
     }
 
     public Book(String title, String author, String authorSurname, String authorPatronymic) {
@@ -37,9 +58,6 @@ public class Book implements TitleLists, Comparable<Book> {
         this.authorPatronymic = authorPatronymic;
 
     }
-
-
-
 
     @Override
     public boolean equals(Object o) {
@@ -61,11 +79,6 @@ public class Book implements TitleLists, Comparable<Book> {
     }
 
     @Override
-    public int compareTo(Book book) {
-        return title.compareTo(book.getTitle());
-    }
-
-    @Override
     public String toString() {
         return "Book{" +
                 "title='" + title + '\'' +
@@ -73,5 +86,38 @@ public class Book implements TitleLists, Comparable<Book> {
                 ", authorSurname='" + authorSurname + '\'' +
                 ", authorPatronymic='" + authorPatronymic + '\'' +
                 '}' + "\n";
+    }
+
+    public static class ComparatorAuthorName implements Comparator<Book> {
+
+        @Override
+        public int compare(Book o1, Book o2) {
+            return o1.getAuthorName().compareTo(o2.getAuthorName());
+        }
+    }
+
+    public static class ComparatorAuthorSurname implements Comparator<Book> {
+
+        @Override
+        public int compare(Book o1, Book o2) {
+            return o1.getAuthorSurname().compareTo(o2.getAuthorSurname());
+        }
+    }
+
+    public static class ComparatorAuthorPatronymic implements Comparator<Book> {
+
+        @Override
+        public int compare(Book o1, Book o2) {
+            return o1.getAuthorPatronymic().compareTo(o2.getAuthorPatronymic());
+        }
+    }
+
+    @Override
+    public int compareTo(Book book) {
+        return Comparator.comparing(Book::getTitle)
+                .thenComparing(Book::getAuthorName)
+                .thenComparing(Book::getAuthorSurname)
+                .thenComparing(Book::getAuthorPatronymic)
+                .compare(this, book);
     }
 }

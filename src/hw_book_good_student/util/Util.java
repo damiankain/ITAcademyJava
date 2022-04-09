@@ -7,15 +7,20 @@ import hw_book_good_student.domain.TitleLists;
 import java.util.*;
 
 public class Util implements TitleLists {
-    //Constant to generate Linked List
-    public static final int LISTSIZE = 20;
+    //Constant to generate Linked List for task 1
+    public static final int LISTSIZE20 = 20;
 
-    //Constant to remove an element
+    //Constant to generate Linked List for task 3
+    public static final int LISTSIZE25 = 25;
+
+    //Constant to remove an element for task 1
     public static final int NUMBERREMOVEELEMENT = 7;
 
+    //Variable for book generation
     public static int INDEXBOOK = 0;
 
-    public static int getRandomIndexBook () {
+    //Method to generate book index from array
+    public static int getRandomIndexBook() {
         INDEXBOOK = (int) Math.floor(Math.random() * (TITLELIST.length));
         return INDEXBOOK;
     }
@@ -25,19 +30,18 @@ public class Util implements TitleLists {
         getRandomIndexBook();
         return TITLELIST[INDEXBOOK];
     }
-
-    public static String getAuthorName() {
+    //The method generates the corresponding author name for the book
+    public static String getBookAuthorName() {
         return NAMEAUTHORLIST[INDEXBOOK];
     }
-
-    public static String getAuthorSurname() {
+    //The method generates the corresponding author surname for the book
+    public static String getBookAuthorSurname() {
         return SURNAMEAUTHORLIST[INDEXBOOK];
     }
-
-    public static String getAuthorPatronymic() {
+    //The method generates the corresponding author patronymic for the book
+    public static String getBookAuthorPatronymic() {
         return PATRONYMICAUTHORLIST[INDEXBOOK];
     }
-
 
     //The method returns a random string according to the specified number of characters
     public static String getRandomString(int length) {
@@ -51,10 +55,10 @@ public class Util implements TitleLists {
     }
 
     //This Method generates a Linked List
-    public static List<Book> generateLinkedList(int LISTSIZE) {
+    public static List<Book> generateLinkedList(int LISTSIZE20) {
         List<Book> listOfBooks = new LinkedList<>();
 
-        for (int i = 0; i < LISTSIZE; i++) {
+        for (int i = 0; i < LISTSIZE20; i++) {
             Book book = new Book();
             listOfBooks.add(book);
         }
@@ -102,7 +106,24 @@ public class Util implements TitleLists {
         return listOfBooks;
     }
 
-    public static <Book> void sort(Book[] book) {
-        Arrays.sort(book);
+    public static void sortTitle(List<Book> book) {
+        Collections.sort(book);
+
     }
+
+    public static void sortAuthorName(List<Book> book) {
+        Collections.sort(book, new Book.ComparatorAuthorName());
+
+    }
+
+    public static void sortAuthorSurname(List<Book> book) {
+        Collections.sort(book, new Book.ComparatorAuthorSurname());
+
+    }
+
+    public static void sortAuthorPatronymic(List<Book> book) {
+        Collections.sort(book, new Book.ComparatorAuthorPatronymic());
+
+    }
+
 }
