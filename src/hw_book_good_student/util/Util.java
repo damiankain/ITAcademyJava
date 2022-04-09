@@ -1,7 +1,7 @@
 package hw_book_good_student.util;
 
-
 import hw_book_good_student.domain.Book;
+import hw_book_good_student.domain.Student;
 import hw_book_good_student.domain.TitleLists;
 
 import java.util.*;
@@ -18,6 +18,10 @@ public class Util implements TitleLists {
 
     //Variable for book generation
     public static int INDEXBOOK = 0;
+
+    public static String authorName;
+    public static String authorSurname;
+    public static String authorPatronymic;
 
     //Method to generate book index from array
     public static int getRandomIndexBook() {
@@ -65,6 +69,16 @@ public class Util implements TitleLists {
         return listOfBooks;
     }
 
+    public static List<Student> generateLinkedListStudents(int count) {
+        List<Student> listOfStudent = new LinkedList<>();
+
+        for (int i = 0; i < count; i++) {
+            Student student = new Student();
+            listOfStudent.add(student);
+        }
+        return listOfStudent;
+    }
+
     //This Method outputs a Linked List to the console
     public static void printBooksLinkedList(List<Book> list) {
         System.out.println(list);
@@ -106,24 +120,17 @@ public class Util implements TitleLists {
         return listOfBooks;
     }
 
-    public static void sortTitle(List<Book> book) {
-        Collections.sort(book);
-
-    }
-
-    public static void sortAuthorName(List<Book> book) {
-        Collections.sort(book, new Book.ComparatorAuthorName());
-
-    }
-
-    public static void sortAuthorSurname(List<Book> book) {
-        Collections.sort(book, new Book.ComparatorAuthorSurname());
-
-    }
-
-    public static void sortAuthorPatronymic(List<Book> book) {
-        Collections.sort(book, new Book.ComparatorAuthorPatronymic());
-
+    //The method sorts the collection by the first name, last name or patronymic parameter
+    public static void sort(List<Book> book, String value) {
+        if (value == authorName) {
+            Collections.sort(book, new Book.ComparatorAuthorName());
+        }
+        if (value == authorSurname) {
+            Collections.sort(book, new Book.ComparatorAuthorSurname());
+        }
+        if (value == authorPatronymic) {
+            Collections.sort(book, new Book.ComparatorAuthorPatronymic());
+        }
     }
 
 }
