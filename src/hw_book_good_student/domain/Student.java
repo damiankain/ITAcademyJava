@@ -3,17 +3,8 @@ package hw_book_good_student.domain;
 import java.util.Objects;
 
 public class Student implements Comparable <Student>{
-    private static int counter;
+
     private int id;
-
-    public static int getCounter() {
-        return counter;
-    }
-
-    public static void setCounter(int counter) {
-        Student.counter = counter;
-    }
-
 
     public int getId() {
         return id;
@@ -23,16 +14,9 @@ public class Student implements Comparable <Student>{
         this.id = id;
     }
 
-    public Student() {
-        counter++;
-        this.id = counter;
-    }
-
-    public Student(int counter, int id) {
-        this.counter = counter;
+    public Student(int id) {
         this.id = id;
     }
-
 
     @Override
     public boolean equals(Object o) {
@@ -55,7 +39,7 @@ public class Student implements Comparable <Student>{
     }
 
     @Override
-    public int compareTo(Student o) {
-        return 0;
+    public int compareTo(Student student) {
+        return this.id - student.id;
     }
 }

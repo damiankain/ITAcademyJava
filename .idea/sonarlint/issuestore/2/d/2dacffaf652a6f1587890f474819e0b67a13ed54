@@ -1,0 +1,7 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(›Úèÿÿÿÿÿ
+G
+java:S2386"1Move "BRANDS" to a class and lower its visibility(Öá²Ÿ
+D
+java:S2140
+")Use "java.util.Random.nextInt()" instead.(‰­ÈÌùÿÿÿÿ

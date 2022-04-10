@@ -16,8 +16,9 @@ public class Util implements TitleLists {
     //Constant to remove an element for task 1
     public static final int NUMBERREMOVEELEMENT = 7;
 
-    //Variable for book generation
+    //Variable for generation
     public static int INDEXBOOK = 0;
+    public static int INDEXUSER = 0;
 
     public static String authorName;
     public static String authorSurname;
@@ -29,23 +30,48 @@ public class Util implements TitleLists {
         return INDEXBOOK;
     }
 
+    public static int getRandomIndexUser() {
+        INDEXUSER = (int) Math.floor(Math.random() * (USERNAME.length));
+        return INDEXUSER;
+    }
+
     //The method returns a random book title from the list
     public static String getBookTitle() {
         getRandomIndexBook();
         return TITLELIST[INDEXBOOK];
     }
+
     //The method generates the corresponding author name for the book
     public static String getBookAuthorName() {
         return NAMEAUTHORLIST[INDEXBOOK];
     }
+
     //The method generates the corresponding author surname for the book
     public static String getBookAuthorSurname() {
         return SURNAMEAUTHORLIST[INDEXBOOK];
     }
+
     //The method generates the corresponding author patronymic for the book
     public static String getBookAuthorPatronymic() {
         return PATRONYMICAUTHORLIST[INDEXBOOK];
     }
+
+    public static String getUserName() {
+        getRandomIndexUser();
+        return USERNAME[INDEXUSER];
+    }
+
+    public static String getUserSurname() {
+        getRandomIndexUser();
+        return USERSURNAME[INDEXUSER];
+    }
+
+    /*public static <User> generateUser () {
+
+
+        return;
+    }*/
+
 
     //The method returns a random string according to the specified number of characters
     public static String getRandomString(int length) {
@@ -69,12 +95,11 @@ public class Util implements TitleLists {
         return listOfBooks;
     }
 
-    public static Set<Student> generateTreeSetStudents(int count) {
-        Set<Student> listOfStudent = new TreeSet<>();
+    public static TreeSet<Student> generateTreeSetStudents(int count) {
+        TreeSet<Student> listOfStudent = new TreeSet<>();
 
-        for (int i = 0; i < count; i++) {
-            Student student = new Student();
-            listOfStudent.add(student);
+        for (int i = 1; i < count; i++) {
+            listOfStudent.add(new Student(i));
         }
         return listOfStudent;
     }
@@ -84,7 +109,7 @@ public class Util implements TitleLists {
         System.out.println(list);
     }
 
-    public static void printBooksLinkedListStudents(Set<Student> list) {
+    public static void printBooksLinkedListStudents(TreeSet<Student> list) {
         System.out.println(list);
     }
 
@@ -98,13 +123,17 @@ public class Util implements TitleLists {
         list.remove(NUMBERREMOVEELEMENT);
     }
 
-    public static void removeElementFromStudentList (Set<Student> list) {
-       /* for (int i = 0; i < list.size(); i++) {
-            if () {
-                list.remove(i);
+    //The method removes every even object
+    public static void removeElementFromStudentList(TreeSet<Student> list) {
+        int listSize = list.size();
+        for (int i = 1; i <= listSize;i++) {
+            if (i % 2 != 0) {
+                list.remove(new Student(i));
             }
-        }*/
+        }
     }
+
+
 
     //This method prints to the console only elements that begin with vowels.
     public static void printHashSetconsonantlist(Set<Book> set) {
