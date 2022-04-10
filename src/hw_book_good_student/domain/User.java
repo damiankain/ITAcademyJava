@@ -3,18 +3,23 @@ package hw_book_good_student.domain;
 import java.util.List;
 import java.util.Objects;
 
+import static hw_book_good_student.util.Util.*;
+
+
 public class User {
     private Long id;
     private String name;
     private String surname;
     private List<User> friends;
+    private static long counter;
 
 
     public User() {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.friends = friends;
+        counter++;
+        this.id = counter;
+        this.name = getUserName();
+        this.surname = getUserSurname();
+        this.friends = generateFriendList(2);
     }
     public User(Long id, String name, String surname, List<User> friends) {
         this.id = id;

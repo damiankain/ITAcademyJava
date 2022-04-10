@@ -3,6 +3,8 @@ package hw_book_good_student.util;
 import hw_book_good_student.domain.Book;
 import hw_book_good_student.domain.Student;
 import hw_book_good_student.domain.TitleLists;
+import hw_book_good_student.domain.User;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.*;
 
@@ -15,6 +17,7 @@ public class Util implements TitleLists {
 
     //Constant to remove an element for task 1
     public static final int NUMBERREMOVEELEMENT = 7;
+    //private static final Object User = gen;
 
     //Variable for generation
     public static int INDEXBOOK = 0;
@@ -30,7 +33,7 @@ public class Util implements TitleLists {
         return INDEXBOOK;
     }
 
-    public static int getRandomIndexUser() {
+    public static int getRandomIndex() {
         INDEXUSER = (int) Math.floor(Math.random() * (USERNAME.length));
         return INDEXUSER;
     }
@@ -57,20 +60,28 @@ public class Util implements TitleLists {
     }
 
     public static String getUserName() {
-        getRandomIndexUser();
+        getRandomIndex();
         return USERNAME[INDEXUSER];
     }
 
     public static String getUserSurname() {
-        getRandomIndexUser();
+        getRandomIndex();
         return USERSURNAME[INDEXUSER];
     }
 
-    /*public static <User> generateUser () {
+    // ДОДЕЛАТЬ, НЕ РАБОТАЕТ
+    public static List<User> generateFriendList(int i) {
+        List <User> listOfUser = new ArrayList<>();
+        if(i != 0) {
+            for (int j = 0; j < i; j++) {
+                listOfUser.add(new User());
+            }return listOfUser;
+        } else {
 
 
-        return;
-    }*/
+            return generateFriendList(i-1);
+        }
+    }
 
 
     //The method returns a random string according to the specified number of characters
@@ -132,8 +143,6 @@ public class Util implements TitleLists {
             }
         }
     }
-
-
 
     //This method prints to the console only elements that begin with vowels.
     public static void printHashSetconsonantlist(Set<Book> set) {

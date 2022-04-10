@@ -56,7 +56,6 @@ public class Book implements TitleLists, Comparable<Book> {
         this.authorName = author;
         this.authorSurname = authorSurname;
         this.authorPatronymic = authorPatronymic;
-
     }
 
     @Override

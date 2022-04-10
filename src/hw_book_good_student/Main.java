@@ -2,15 +2,17 @@ package hw_book_good_student;
 
 import hw_book_good_student.domain.Book;
 import hw_book_good_student.domain.Student;
+import hw_book_good_student.domain.User;
 import hw_book_good_student.util.Util;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
-       /* System.out.println("******************* Task 1 *******************");
+    /*    System.out.println("******************* Task 1 *******************");
 
         List<Book> listOfBookLLTask1 = Util.generateLinkedList(Util.LISTSIZE20);
         Util.printBooksLinkedList(listOfBookLLTask1);
@@ -49,6 +51,13 @@ public class Main {
         Util.printBooksLinkedListStudents(listOfStudent);*/
 
         System.out.println("******************* Task 5 *******************");
+
+        List<User> list = Util.generateFriendList(1);
+        System.out.println(list);
+
+
+       /* List<User> listOfUser = Util.generateFriendList();
+        System.out.println(listOfUser);*/
 
 
 
