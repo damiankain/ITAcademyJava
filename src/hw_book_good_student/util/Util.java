@@ -164,7 +164,10 @@ public class Util implements TitleLists {
         }
 
         for (int i = 0; i < 6; i++) {
-            Book book = new Book("Без названия", "Без автора", "Без фамилии", "Без отчества");
+            Book book = new Book("Без названия",
+                    "Без автора",
+                    "Без фамилии",
+                    "Без отчества");
             listOfBooks.add(book);
         }
         return listOfBooks;
