@@ -12,7 +12,7 @@ import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
-    /*    System.out.println("******************* Task 1 *******************");
+        System.out.println("******************* Task 1 *******************");
 
         List<Book> listOfBookLLTask1 = Util.generateLinkedList(Util.LISTSIZE20);
         Util.printBooksLinkedList(listOfBookLLTask1);
@@ -48,12 +48,12 @@ public class Main {
         TreeSet<Student> listOfStudent = Util.generateTreeSetStudents(20);
         Util.printBooksLinkedListStudents(listOfStudent);
         Util.removeElementFromStudentList(listOfStudent);
-        Util.printBooksLinkedListStudents(listOfStudent);*/
+        Util.printBooksLinkedListStudents(listOfStudent);
 
         System.out.println("******************* Task 5 *******************");
 
-        List<User> list = Util.generateFriendList(1);
-        System.out.println(list);
+       /* List<User> list = Util.generateFriendList(1);
+        System.out.println(list);*/
 
 
        /* List<User> listOfUser = Util.generateFriendList();

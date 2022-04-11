@@ -70,7 +70,7 @@ public class Util implements TitleLists {
     }
 
     // ДОДЕЛАТЬ, НЕ РАБОТАЕТ
-    public static List<User> generateFriendList(int i) {
+    /*public static List<User> generateFriendList(int i) {
         List <User> listOfUser = new ArrayList<>();
         if(i != 0) {
             for (int j = 0; j < i; j++) {
@@ -81,7 +81,7 @@ public class Util implements TitleLists {
 
             return generateFriendList(i-1);
         }
-    }
+    }*/
 
 
     //The method returns a random string according to the specified number of characters

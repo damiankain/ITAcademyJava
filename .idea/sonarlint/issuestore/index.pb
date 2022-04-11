@@ -9,3 +9,11 @@ I
 src/HW_Car/CarBrands.java,2\d\2dacffaf652a6f1587890f474819e0b67a13ed54
 E
 src/HW_Car/Utils.java,0\d\0d605566441e4b95baa85dd61dee893a4af8d774
+\
+,src/hw_book_good_student/domain/Student.java,a\a\aa80cfcdf507244955a1f436ef922bf9d671dd4b
+D
+src/HW_Car/Main.java,6\8\683926ba28dcf46d2db4e0add883b03df205e902
+C
+src/HW_Car/Car.java,a\f\aff0ceb8b39cccdb25aaa1ef5446606eb8e79822
+Y
+)src/hw_book_good_student/domain/Book.java,e\4\e4aaf0dc0beae9c8c1c1d890f65768f80c06b833
