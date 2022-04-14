@@ -26,6 +26,7 @@ public interface TitleLists {
             "Возлюбленная",
     };
 
+    //The array stores the names of the authors of the books
     String[] NAMEAUTHORLIST = {
             "Лев",
             "Джордж",
@@ -49,6 +50,7 @@ public interface TitleLists {
             "Тони"
     };
 
+    //The array stores the last name of the authors of the books
     String[] SURNAMEAUTHORLIST = {
             "Толстой",
             "Оруэлл",
@@ -72,6 +74,7 @@ public interface TitleLists {
             "Моррисон"
     };
 
+    //The array stores the middle names of the authors of the books
     String[] PATRONYMICAUTHORLIST = {
             "null",
             "null",
@@ -95,6 +98,7 @@ public interface TitleLists {
             "null"
     };
 
+    //The array stores the names of friends
     String[] USERNAME = {
             "Коля",
             "Оля",
@@ -108,6 +112,7 @@ public interface TitleLists {
             "Виталик"
     };
 
+    //The array stores the last names of friends
     String[] USERSURNAME = {
             "Иванов",
             "Петров",

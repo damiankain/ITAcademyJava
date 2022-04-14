@@ -19,7 +19,7 @@ public class User {
         this.id = counter;
         this.name = getUserName();
         this.surname = getUserSurname();
-        this.friends = generateFriendList(2);
+        //this.friends = generateFriendList(2);
     }
     public User(Long id, String name, String surname, List<User> friends) {
         this.id = id;

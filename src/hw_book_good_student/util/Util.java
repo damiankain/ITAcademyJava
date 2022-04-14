@@ -4,7 +4,6 @@ import hw_book_good_student.domain.Book;
 import hw_book_good_student.domain.Student;
 import hw_book_good_student.domain.TitleLists;
 import hw_book_good_student.domain.User;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.*;
 
@@ -19,7 +18,7 @@ public class Util implements TitleLists {
     public static final int NUMBERREMOVEELEMENT = 7;
     //private static final Object User = gen;
 
-    //Variable for generation
+    //Variables for generation
     public static int INDEXBOOK = 0;
     public static int INDEXUSER = 0;
 
@@ -33,6 +32,7 @@ public class Util implements TitleLists {
         return INDEXBOOK;
     }
 
+    //The method receives a random index to generate the user object
     public static int getRandomIndex() {
         INDEXUSER = (int) Math.floor(Math.random() * (USERNAME.length));
         return INDEXUSER;
@@ -59,17 +59,21 @@ public class Util implements TitleLists {
         return PATRONYMICAUTHORLIST[INDEXBOOK];
     }
 
+    //The method gets a random index from the list of names by index
     public static String getUserName() {
         getRandomIndex();
         return USERNAME[INDEXUSER];
     }
 
+    //The method gets a random index from the list of last names by index
     public static String getUserSurname() {
         getRandomIndex();
         return USERSURNAME[INDEXUSER];
     }
 
-    // ДОДЕЛАТЬ, НЕ РАБОТАЕТ
+    // !!!!!!!!!!Method 5 of the task. Does not work. Causes an
+    // infinite loop to create the user object!!!!!!!!!!!!
+
     /*public static List<User> generateFriendList(int i) {
         List <User> listOfUser = new ArrayList<>();
         if(i != 0) {
@@ -77,8 +81,6 @@ public class Util implements TitleLists {
                 listOfUser.add(new User());
             }return listOfUser;
         } else {
-
-
             return generateFriendList(i-1);
         }
     }*/
@@ -106,6 +108,7 @@ public class Util implements TitleLists {
         return listOfBooks;
     }
 
+    //The method creates an ordered set of students in the form of TreeSet
     public static TreeSet<Student> generateTreeSetStudents(int count) {
         TreeSet<Student> listOfStudent = new TreeSet<>();
 
@@ -144,15 +147,14 @@ public class Util implements TitleLists {
         }
     }
 
-    //This method prints to the console only elements that begin with vowels.
-    public static void printHashSetconsonantlist(Set<Book> set) {
+    //The method removes objects starting with a consonant from the set
+    public static void printHashSetVowelslist(Set<Book> set) {
         String s = "БВГДЖЗКЛМНПРСТФХЦЧШЩЬЪ"; //A set of letters in a string for comparison
         for (int i = 0; i < s.length(); i++) { //cycle equal to the length of the string with a set of letters
             int k = s.indexOf(s.charAt(i)); //Get the index of a character in a string
             //Removing elements starting with consonants
             set.removeIf(element -> element.getTitle().charAt(0) == s.toUpperCase().charAt(k));
         }
-        System.out.println(set);
     }
 
     //The method generates a hash set of 25 elements, where 6 elements are identical

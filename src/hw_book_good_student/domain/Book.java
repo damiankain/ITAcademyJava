@@ -89,6 +89,7 @@ public class Book implements TitleLists, Comparable<Book> {
 
     public static class ComparatorAuthorName implements Comparator<Book> {
 
+        //Comparator compares objects by name
         @Override
         public int compare(Book o1, Book o2) {
             return o1.getAuthorName().compareTo(o2.getAuthorName());
@@ -97,6 +98,7 @@ public class Book implements TitleLists, Comparable<Book> {
 
     public static class ComparatorAuthorSurname implements Comparator<Book> {
 
+        //Comparator compares objects by surname
         @Override
         public int compare(Book o1, Book o2) {
             return o1.getAuthorSurname().compareTo(o2.getAuthorSurname());
@@ -105,6 +107,7 @@ public class Book implements TitleLists, Comparable<Book> {
 
     public static class ComparatorAuthorPatronymic implements Comparator<Book> {
 
+        //Comparator compares objects by patronymic
         @Override
         public int compare(Book o1, Book o2) {
             return o1.getAuthorPatronymic().compareTo(o2.getAuthorPatronymic());
