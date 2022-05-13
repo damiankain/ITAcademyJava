@@ -1,0 +1,9 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ˆåÁ¸úÿÿÿÿ8Öí“Ì0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(‘ß°¢úÿÿÿÿ8æí“Ì0
+U	java:S106$"9Replace this use of System.out or System.err by a logger.(ûú©Ê8êí“Ì0
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(¢ìèÉøÿÿÿÿ8ûí“Ì0
+Z	java:S106>"9Replace this use of System.out or System.err by a logger.(”¦ışÿÿÿÿ8ÙƒØµ‚0
+]	java:S125A"<This block of commented-out lines of code should be removed.(í½“ıÿÿÿÿ8ÚƒØµ‚0
+Z
+java:S1128"=Remove this unused import 'hw_book_good_student.domain.User'.(õëÕ8œ™ë¾„0

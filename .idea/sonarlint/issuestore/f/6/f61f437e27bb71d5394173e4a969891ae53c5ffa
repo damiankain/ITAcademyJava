@@ -1,0 +1,56 @@
+
+
+java:S1319p"sThe return type of this method should be an interface such as "SortedSet" rather than the implementation "TreeSet".(´·ª“ıÿÿÿÿ
+}
+java:S1319~"gThe type of "list" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(©†Ü
+~
+java:S1319"gThe type of "list" should be an interface such as "SortedSet" rather than the implementation "TreeSet".(º¤òŠ
+‰
+java:S1319¡"mThe return type of this method should be an interface such as "Set" rather than the implementation "HashSet".(áÒ‘ßùÿÿÿÿ
+k	java:S117e"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ó‘É“üÿÿÿÿ
+p
+java:S1104"UMake INDEXBOOK a static final constant or non-public and provide accessors if needed.(æÓ—ıÿÿÿÿ
+k
+java:S1104"UMake INDEXUSER a static final constant or non-public and provide accessors if needed.(ûñ
+l
+java:S1104"VMake authorName a static final constant or non-public and provide accessors if needed.(¯¡·â
+o
+java:S1104"YMake authorSurname a static final constant or non-public and provide accessors if needed.(³¶á‚
+r
+java:S1104"\Make authorPatronymic a static final constant or non-public and provide accessors if needed.(¶¢ˆ¨
+J
+java:S1444"/Make this "public static INDEXBOOK" field final(æÓ—ıÿÿÿÿ
+E
+java:S1444"/Make this "public static INDEXUSER" field final(ûñ
+F
+java:S1444"0Make this "public static authorName" field final(¯¡·â
+I
+java:S1444"3Make this "public static authorSurname" field final(³¶á‚
+L
+java:S1444"6Make this "public static authorPatronymic" field final(¶¢ˆ¨
+S
+java:S4973´"<Strings and Boxed types should be compared using "equals()".(ˆ“Áİ
+X
+java:S4973·"<Strings and Boxed types should be compared using "equals()".(äÌ»Éøÿÿÿÿ
+R
+java:S4973º"<Strings and Boxed types should be compared using "equals()".(é—·
+o
+java:S3008"TRename this field "INDEXBOOK" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æÓ—ıÿÿÿÿ
+j
+java:S3008"TRename this field "INDEXUSER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ûñ
+P
+java:S1118
+":Add a private constructor to hide the implicit public one.(ë„¹ã
+Q	java:S125"<This block of commented-out lines of code should be removed.(«ìé
+?
+java:S2140")Use "java.util.Random.nextInt()" instead.(í‚÷
+?
+java:S2140%")Use "java.util.Random.nextInt()" instead.( öÖ½
+V	java:S125M"<This block of commented-out lines of code should be removed.(üô¢èıÿÿÿÿ
+9
+java:S2119^"Save and re-use this "Random".(æ±€èûÿÿÿÿ
+S	java:S106{"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+O	java:S106„"9Replace this use of System.out or System.err by a logger.(ç’¤™
+Z
+java:S1128"=Remove this unused import 'hw_book_good_student.domain.User'.(õëÕ8ÁÆòµ‚0
