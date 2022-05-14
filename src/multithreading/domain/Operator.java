@@ -1,11 +1,16 @@
 package multithreading.domain;
 
 import multithreading.util.Utils;
+
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
-public class Operator implements Runnable{
-    private int operatorID;
+public class Operator implements Runnable {
+    private final int operatorID;
+
+    public int getOperatorID() {
+        return operatorID;
+    }
 
     public Operator(int operatorID) {
         System.out.println("Operator " + operatorID + " waiting call");
@@ -19,7 +24,6 @@ public class Operator implements Runnable{
         Operator operator = (Operator) o;
         return operatorID == operator.operatorID;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(operatorID);
@@ -27,11 +31,8 @@ public class Operator implements Runnable{
 
     @Override
     public String toString() {
-        return "Operator{" +
-                "operator " + operatorID +
-                '}';
+        return "Operator{" + "operator " + operatorID + '}';
     }
-
     @Override
     public void run() {
         while (CallCenter.isIsOpen()) {
@@ -41,19 +42,14 @@ public class Operator implements Runnable{
                 throw new RuntimeException(e);
             }
         }
-
     }
     private void conversationUserFromQueue() throws InterruptedException {
-        User user = Utils.getQueue().poll(200, TimeUnit.MILLISECONDS);
-        if (user != null) {
-            System.out.println("Operator " + operatorID + " conversation with user " + User.getUserID());
+        //Take an element from the queue within a certain timeout and remove it
+        User user = Utils.getQueue().poll(50, TimeUnit.MILLISECONDS);
+        if (user != null) { //If the queue is not empty then execute
+            System.out.println("Operator " + getOperatorID() + " conversation with user " + user.getUserID());
         }
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        Thread.sleep(100);
 
+        Thread.sleep(500);
     }
 }

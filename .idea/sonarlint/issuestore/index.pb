@@ -21,8 +21,6 @@ W
 'src/hw_book_good_student/util/Util.java,f\6\f61f437e27bb71d5394173e4a969891ae53c5ffa
 _
 /src/hw_book_good_student/domain/TitleLists.java,8\f\8f843cd49f079966a25f24eccc3f6686e1570372
-\
-,src/hw_book_good_student/domain/Student.java,a\a\aa80cfcdf507244955a1f436ef922bf9d671dd4b
 Y
 )src/hw_book_good_student/domain/User.java,e\a\ea0ebf5b884ed925dea9ed978cdd8b25a4f05b1c
 J
@@ -43,3 +41,9 @@ F
 src/Lesson003/Cat.java,a\c\ac709b5049ded53654d8a439ad13ad6da24a4cb8
 I
 src/com/company/Main.java,4\a\4a831b10439099d44774d0ccc387e808deffaeab
+w
+G.idea/sonarlint/issuestore/4/a/4a831b10439099d44774d0ccc387e808deffaeab,6\8\681e263c5b2886922e9720b34710413b61612b70
+w
+G.idea/sonarlint/issuestore/e/4/e4aaf0dc0beae9c8c1c1d890f65768f80c06b833,e\b\eb12fe69dc034df4048275399f7cd410156bf0dc
+w
+G.idea/sonarlint/issuestore/a/a/aa80cfcdf507244955a1f436ef922bf9d671dd4b,4\f\4ffbe97a138fbe3999511d73199f6071807616ef

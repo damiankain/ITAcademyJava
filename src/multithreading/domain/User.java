@@ -2,12 +2,13 @@ package multithreading.domain;
 
 import java.util.Objects;
 
-public class User{
+public class User {
 
     private static int userID;
+
     public User(int userID) {
         System.out.println("User " + userID + " calling in Callcentre");
-        this.userID = userID;
+        User.userID = userID;
     }
 
     public static int getUserID() {
@@ -18,13 +19,12 @@ public class User{
         User.userID = userID;
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return userID == user.userID;
+        return userID == userID;
     }
 
     @Override
